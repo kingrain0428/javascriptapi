@@ -8,8 +8,8 @@ btn.addEventListener('click', function () {
     // setTimeout(() => {
 // 
     // }, 1000)
-    demo.removeChild(span);
-    // demo.innerHTML = 'change text';
+    // demo.removeChild(span);
+    span.innerHTML = 'change text';
 })
 
 
@@ -21,6 +21,8 @@ const config = {
 }
 
 const callback = (mutationsList, observer) => {
+    console.log(document.body.contains(span));
+    alert()
     // alert(123)
     console.log('mutationsList:' + mutationsList);
     console.log('observer:' + observer);
@@ -30,4 +32,4 @@ const observer = new MutationObserver(callback);
 console.log(observer)
 observer.observe(demo, config);
 
-observer.disconnect();
+// observer.disconnect();
